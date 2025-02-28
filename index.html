@@ -40,7 +40,7 @@
     <div class="header-top">
       <div class="container">
 
-        <a href="tel:+01123456790" class="helpline-box">
+        <a href="tel:+01123456789" class="helpline-box">
 
           <div class="icon-box">
             <ion-icon name="call-outline"></ion-icon>
@@ -738,7 +738,7 @@
             <li class="contact-item">
               <ion-icon name="call-outline"></ion-icon>
 
-              <a href="tel:+01123456790" class="contact-link">+01 (123) 4567 90</a>
+              <a href="tel:+01123456790" class="contact-link">+01 (123) 4567 89</a>
             </li>
 
             <li class="contact-item">
@@ -750,7 +750,7 @@
             <li class="contact-item">
               <ion-icon name="location-outline"></ion-icon>
 
-              <address>3146 Koontz, California</address>
+              <address>San Jose, California</address>
             </li>
 
           </ul>
@@ -778,7 +778,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 <a href="">codewithsadee</a>. All rights reserved
+          &copy; 2022 <a href="">Sanjushree Golla</a>. All rights reserved
         </p>
 
         <ul class="footer-bottom-list">
@@ -828,6 +828,31 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const bookButtons = document.querySelectorAll(".btn-secondary, .header .btn-primary");
+    
+    bookButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        window.location.href = "payment.html"; // Redirect to payment page
+      });
+    });
+  });
+</script>
+<script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+        // Capture form data
+        const destination = document.getElementById('destination').value;
+        const checkinDate = document.getElementById('checkin-date').value;
+        const checkoutDate = document.getElementById('checkout-date').value;
+
+        // Store data in sessionStorage
+        sessionStorage.setItem('destination', destination);
+        sessionStorage.setItem('checkinDate', checkinDate);
+        sessionStorage.setItem('checkoutDate', checkoutDate);
+    });
+</script>
 
 </body>
 
